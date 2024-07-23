@@ -20,7 +20,7 @@ public class WebScrapingUtils {
     private static WebDriverWait wait;
 
     public static void abrirBrowser() {
-        // Configura o ChromeDriver (ajuste o caminho conforme necessário)
+        // Configura o ChromeDriver
         System.setProperty("webdriver.chrome.driver", "C:/Program Files/Google/chromedriver-win64/chromedriver.exe");
 
         // Configurações opcionais do Chrome (headless)
@@ -29,7 +29,7 @@ public class WebScrapingUtils {
 
         // Inicializa o WebDriver
         driver = new ChromeDriver(options);
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Defina o tempo máximo de espera aqui (10 segundos neste exemplo)
+        wait = new WebDriverWait(driver, Duration.ofSeconds(10)); // Defina o tempo máximo de espera
     }
 
     public static void fecharBrowser() {
